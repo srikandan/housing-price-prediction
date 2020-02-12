@@ -11,7 +11,6 @@ import statsmodels.api as sm
 from sklearn.model_selection import GridSearchCV
 import pickle
 
-
 # =============================================================================
 # WORKING WITH TRAINING DATA
 # =============================================================================
@@ -296,8 +295,7 @@ def get_uniques(data, feature):
 
 # Data Preprocessing
         
-data_set = pd.read_csv('C:/Users/SRIKANDAN/DataScience/Project/HousingPricePrediction/train.csv', 
-                       index_col = 'Id')
+data_set = pd.read_csv('train.csv', index_col = 'Id')
 data_set.info()
 
 data_set_shape = data_set.shape
@@ -531,8 +529,7 @@ adj_r2 = 1 - ((1 - r2) * ((train_X.shape[0] - 1) / (train_X.shape[0] -
 # WORKING WITH TEST DATA
 # =============================================================================
 
-test_data_set = pd.read_csv('C:/Users/SRIKANDAN/DataScience/Project/HousingPricePrediction/test.csv', 
-                            index_col = 'Id')
+test_data_set = pd.read_csv('test.csv', index_col = 'Id')
 test_data_set.info()
 
 test_data_shape = test_data_set.shape
